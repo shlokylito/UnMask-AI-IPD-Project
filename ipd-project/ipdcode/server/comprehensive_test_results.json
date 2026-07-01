@@ -1,0 +1,15 @@
+{
+  "test_date": "2026-04-09 14:51:33",
+  "image_tests": {
+    "total_images": 10,
+    "correct_predictions": 8,
+    "accuracy_percentage": 80.0
+  },
+  "video_tests": {
+    "total_videos": 3,
+    "videos_tested": [
+      {
+        "filename": "barackobama.mp4",
+        "duration": 36.2,
+        "frames_sampled": 10,
+        "confidence": 

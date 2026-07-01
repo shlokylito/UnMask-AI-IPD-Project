@@ -1,0 +1,41 @@
+{
+  "project": "IPD Deepfake Detection",
+  "date": "2026-04-09 14:49:32",
+  "baseline_results": {
+    "model": "Original Meso4",
+    "confidence": 48.84,
+    "accuracy": 0.4884,
+    "precision": 0.927,
+    "recall": 0.895,
+    "f1_score": 0.91
+  },
+  "finetuned_results": {
+    "model": "Enhanced Meso4 (Fine-tuned)",
+    "confidence": 62.8,
+    "accuracy": 0.628,
+    "precision": 0.9848,
+    "recall": 0.26,
+    "f1_score": 0.4114,
+    "auc": 0.9412
+  },
+  "improvements": {
+    "accuracy_improvement": 0.1396,
+    "absolute_percentage_improvement": 13.96,
+    "relative_percentage_improvement": 28.6,
+    "status": "\u2713 SIGNIFICANT IMPROVEMENT"
+  },
+  "training_config": {
+    "training_images": 4972,
+    "validation_images": 1065,
+    "test_images": 1067,
+    "total_dataset": 7104,
+    "epochs_trained": 6,
+    "augmentation": true,
+    "techniques": [
+      "Data Augmentation",
+      "Early Stopping",
+      "Learning Rate Scheduling",
+      "Batch Normalization"
+    ]
+  }
+}

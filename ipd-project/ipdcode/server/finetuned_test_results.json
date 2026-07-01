@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-04-09 14:49:32",
+  "test_set_size": 500,
+  "test_accuracy": 0.628,
+  "test_precision": 0.9848,
+  "test_recall": 0.26,
+  "test_f1_score": 0.4114,
+  "test_auc": 0.9412,
+  "confidence_percentage": 62.8
+}

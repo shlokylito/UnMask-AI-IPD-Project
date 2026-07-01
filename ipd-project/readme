@@ -1,0 +1,37 @@
+# IPD Project: Deepfake Detection System
+
+This project is a comprehensive deepfake detection platform that combines machine learning models, a web application, and a browser extension to identify fake media content. It analyzes images, videos, and audio for signs of manipulation, providing confidence scores and detailed insights.
+
+## Project Structure
+
+- **client/**: A Next.js web application for user interaction. Users can upload media files, view analysis results, and access a dashboard with metrics like face distortion, frame consistency, and sentiment analysis.
+- **server/**: A Flask-based API server that handles media processing. It uses pre-trained models (e.g., MesoNet for deepfake detection) and integrates with libraries like TensorFlow, OpenCV, and MediaPipe for tasks such as face detection, frame analysis, and audio mismatch scoring.
+- **Deepfake-detection/**: Contains Jupyter notebooks and trained models for deepfake research. Includes MesoNet implementation, data preprocessing, and model checkpoints for detecting synthetic media.
+- **extension/**: A browser extension that enables real-time deepfake detection on live streams and social media. It captures media and sends it to the server for analysis.
+
+## How It Works
+
+The system processes uploaded or streamed media through multiple detection layers:
+- **Image Analysis**: Detects face distortions and predicts authenticity using convolutional neural networks.
+- **Video Analysis**: Checks for frame anomalies, lip-sync deviations, and audio-visual mismatches.
+- **Audio Analysis**: Compares voice patterns for mismatches and sentiment cues.
+- Results are aggregated into a confidence score, with explanations for each metric.
+
+## API Overview
+
+The server exposes RESTful endpoints for integration:
+
+- **POST /process_image**: Uploads an image file and returns predictions, best label, score, and face distortion data.
+- **POST /process_video**: Processes a video file, analyzing frames, faces, and audio to provide detailed scores like confidence, mismatch, and risk level.
+- **POST /analyze_audio**: Analyzes audio for cosine similarity, Euclidean distance, and mismatch scores.
+
+All endpoints accept file uploads and return JSON responses with metrics. The API uses CORS for cross-origin requests and runs on localhost:5000 by default.
+
+## Getting Started
+
+1. Install dependencies for each component (see individual READMEs in client/, server/, etc.).
+2. Start the server: Run `python app.py` in server/.
+3. Launch the client: Use `npm run dev` in client/.
+4. For the extension, load it in your browser's developer mode.
+
+For detailed setup, refer to the READMEs in each subdirectory.
