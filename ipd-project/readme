@@ -1,4 +1,4 @@
-# IPD Project: Deepfake Detection System
+# Deepfake Detection System
 
 This project is a comprehensive deepfake detection platform that combines machine learning models, a web application, and a browser extension to identify fake media content. It analyzes images, videos, and audio for signs of manipulation, providing confidence scores and detailed insights.
 
